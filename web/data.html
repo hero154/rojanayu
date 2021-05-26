@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-image: url("ss2.jpg");
+            background-position: center top;
+            background-attachment: fixed;
+            background-size: auto;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        #abc {
+            height: 500px;
+            opacity: 0.7;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        #efg {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #klm {
+            background-color: red;
+            width: 75%;
+        }
+
+        .xyy {
+            height: 25em;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .child {
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            /* apply negative top and left margins to truly center the element */
+        }
+
+        #adg {
+            padding-left: 40%;
+            color: black;
+        }
+
+        #bbb {
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .npp {
+            margin-top: 50px;
+        }
+
+        #mpp {
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+
+        #fff {
+            font-weight: bold;
+            font-size: 20px;
+            width: 300px;
+            /* margin: auto; */
+            /* margin-bottom: 10px; */
+            display: inline;
+            color: black;
+            text-decoration: none;
+        }
+
+        #fff:hover {
+            background: #666;
+        }
+
+        #ggg {
+            display: inline;
+            padding: auto;
+            text-decoration: none;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 190px;
+        }
+
+        header h1 {
+            font: normal 32px/1.5 'Open Sans', sans-serif;
+            color: #3F71AE;
+            padding-bottom: 16px;
+        }
+
+        header h2 {
+            color: #F05283;
+        }
+
+        header span {
+            color: #3F71EA;
+        }
+
+
+        /* The footer is fixed to the bottom of the page */
+
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+
+        @media (max-height:800px) {
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+        }
+
+
+        .footer-distributed {
+            background-color: #2c292f;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 50px 50px 60px 50px;
+            /* margin-top: 80px; */
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left {
+            width: 30%;
+        }
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+
+        /* The company logo */
+
+        .footer-distributed .footer-left img {
+            width: 30%;
+        }
+
+        .footer-distributed h3 span {
+            color: #e0ac1c;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+
+        .footer-distributed .footer-center i {
+            background-color: #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: #e0ac1c;
+            text-decoration: none;
+            ;
+        }
+
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right {
+            width: 30%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        /* Here is the code for Responsive Footer */
+        /* You can remove below code if you don't want Footer to be responsive */
+
+
+        @media (max-width: 880px) {
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+
+        }
+
+        table {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        th {
+            padding: 10px 15px 10px 15px;
+        }
+
+        td {
+            padding: 10px 15px 10px 15px;
+            font-weight: bold;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            border: 4px solid rgb(49, 158, 134);
+            text-align: center;
+        }
+
+        #abcd {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="img-fluid">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="logo1.PNG" alt="" width="130" height="34">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="index.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="precautions.html"><b>Precautions</b></a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>COVID in your States</b>
+                        </a>
+                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item bg-secondary" href="data.html">Bihar</a></li>
+                            <li>
+                                <hr class="dropdown-divider ">
+                            </li>
+                            <li><a class="dropdown-item bg-secondary" href="data.html">Delhi</a></li>
+                            <li>
+                                <hr class="dropdown-divider ">
+                            </li>
+                            <li><a class="dropdown-item bg-secondary" href="data.html">Maharashtra</a></li>
+                            <li>
+                                <hr class="dropdown-divider ">
+                            </li>
+                            <li><a class="dropdown-item bg-secondary" href="data.html">Uttar Pradesh</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <a style="text-decoration: none;  margin-left: 10px;" href="symptoms.html"><span style="font-weight: bold; color: black; background:rgba(255, 255, 255, 1);padding: 5px 5px 5px 5px;">Symptoms</span></a>
+                  </form>
+            </div>
+        </div>
+    </nav>
+    <div class="xyy">
+        <div class="child">
+            <h2 class="my-4" style="font-weight: bold;  background-color: rgb(49, 158, 134); padding: 5px 5px 5px 5px;">
+                Current COVID-19 scenerio of your State</h2>
+            <ul id="ggg">
+                <li id="fff"><a href="data.html" id="opq"
+                        style="color: rgb(49, 158, 134);text-decoration: none;padding: 6px; background: rgba(0, 0, 0, 0.5);">Uttar
+                        Pradesh</a></li>
+                <li id="fff"><a href="data.html" id="opq"
+                        style="color: rgb(49, 158, 134);text-decoration: none;padding: 6px; background: rgba(0, 0, 0, 0.5);">Bihar</a>
+                </li>
+                <li id="fff"><a href="data.html" id="opq"
+                        style="color: rgb(49, 158, 134);text-decoration: none;padding: 6px; background: rgba(0, 0, 0, 0.5);">Delhi</a>
+                </li>
+                <li id="fff"><a href="data.html" id="opq"
+                        style="color: rgb(49, 158, 134);text-decoration: none;padding: 6px; background: rgba(0, 0, 0, 0.5);">Maharashtra</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="efg">
+        <div class="container">
+            <div style=" margin-top: auto;"><span
+                style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;margin: auto;font-size: 20px;font-weight: bold; background-size:cover;"><span style="color: goldenrod;">Stats updated on 25 May 2021</span></span></div>
+            <div style=" margin-top: 60px;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;margin: auto;font-size: 20px;font-weight: bold; background-size:cover;">Uttar
+                    Pradesh</span></div>
+            <div id="data">
+                <table>
+                    <th>Cases inc/dec Today </th>
+                    <th>People Recovered Today </th>
+                    <th>Today's Deaths Count </th>
+                    <tr>
+                        <td>8177(dec) </td>
+                        <td>11918 </td>
+                        <td>153 </td>
+                    </tr>
+
+                </table>
+                <table>
+                    <th>Total Cases</th>
+                    <th>Total People Recovered </th>
+                    <th>Total Deaths </th>
+                    <tr>
+                        <td>1,673,785 </td>
+                        <td>1,577,720 </td>
+                        <td>19362 </td>
+                    </tr>
+
+                </table>
+
+                <div style=" margin-top: 40px; text-align: center;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Total no. of people vaccinated in Uttar Pradesh till  <span style="color: goldenrod;">25 May 2021</span> are 1,29,28,280</span></div>
+
+
+            </div>
+            <div style=" margin-top: 40px;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Bihar</span>
+            </div>
+            <div id="data">
+                <table>
+                    <th>Cases inc/dec Today </th>
+                    <th>People Recovered Today </th>
+                    <th>Today's Deaths Count </th>
+                    <tr>
+                        <td>2749(dec) </td>
+                        <td>5500 </td>
+                        <td>93 </td>
+                    </tr>
+
+                </table>
+                <table>
+                    <th>Total Cases</th>
+                    <th>Total People Recovered </th>
+                    <th>Total Deaths </th>
+                    <tr>
+                        <td>692,420 </td>
+                        <td>649,835 </td>
+                        <td>4642 </td>
+                    </tr>
+
+                </table>
+
+                <div style=" margin-top: 40px; text-align: center;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Disctrict Wise Increased cases <span style="color: goldenrod;">25 May 2021</span></span></div>
+            <p id="abcd"><img src="vac3.jpeg" alt="" class="ind my-4 img-fluid"></p>
+            <p style="color: white;font-weight: bold; text-align: center;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold;">
+                    <a style=" color: white;font-weight: bold;" href="https://twitter.com/BiharHealthDept?s=08">
+                        Source © Bihar Govt</a></span> </p>
+
+                <div style=" margin-top: 40px; text-align: center;"><span
+                        style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Vaccination
+                        Index of Bihar till <span style="color: goldenrod;">24 May 2021</span></span></div>
+                <p id="abcd"><img src="vac2.jpeg" alt="" class="ind my-4 img-fluid"></p>
+                <p style="color: white;font-weight: bold; text-align: center;"><span
+                        style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold;">
+                        <a style=" color: white;font-weight: bold;" href="https://twitter.com/BiharHealthDept?s=08">
+                            Source © Bihar Govt</a></span> </p>
+
+
+
+            </div>
+            <div style=" margin-top: 40px;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Delhi</span>
+            </div>
+            <div id="data">
+                <table>
+                    <th>Cases inc/dec Today </th>
+                    <th>People Recovered Today </th>
+                    <th>Today's Deaths Count </th>
+                    <tr>
+                        <td>3032(dec) </td>
+                        <td>4375 </td>
+                        <td>207 </td>
+                    </tr>
+
+                </table>
+                <table>
+                    <th>Total Cases</th>
+                    <th>Total People Recovered </th>
+                    <th>Total Deaths </th>
+                    <tr>
+                        <td>1,418,418 </td>
+                        <td>1,370,431 </td>
+                        <td>23409 </td>
+                    </tr>
+
+                </table>
+
+                <div style=" margin-top: 40px;text-align: center;"><span
+                        style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; ">Vaccination
+                        Index of Delhi till <span style="color: goldenrod;">25 May 2021</span></span></div>
+                <p id="abcd"><img src="vac1.jpeg" alt="" class="ind my-4 img-fluid"></p>
+                <p style="color: white;font-weight: bold;text-align: center;"><span
+                        style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold;">
+                        <a style=" color: white;font-weight: bold;" href="https://delhifightscorona.in/"> Source © Delhi
+                            Govt</a> </span></p>
+
+            </div>
+            <div style=" margin-top: 40px;"><span
+                    style="background: rgba(0, 0, 0, 0.5); color: white;padding: 10px 20px 10px 20px;font-size: 20px;font-weight: bold; background-size:cover; margin-top: 100px;">Maharashtra</span>
+            </div>
+            <div id="data">
+                <table>
+                    <th>People Recovered Today </th>
+                    <th>Cases increased Today </th>
+                    <th>Today's Deaths Count </th>
+                    <tr>
+                        <td>1234567 </td>
+                        <td>1234567 </td>
+                        <td>1234567 </td>
+                    </tr>
+
+                </table>
+                <table>
+                    <th>Current Total Cases</th>
+                    <th>Total People Recovered </th>
+                    <th>Total Deaths </th>
+                    <tr>
+                        <td>5,602,019 </td>
+                        <td>5,182592 </td>
+                        <td>89212 </td>
+                    </tr>
+
+                </table>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <!-- <img src="img/logo.png"> -->
+            <h3><span>COVID-INFO</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">© copyright 2021 COVID-INFO </p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>309 - Rupa Solitaire,
+                        Bldg. No. A - 1, Sector - 1</span>
+                    Mahape, Navi Mumbai - 400710</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 9955424806</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailus">rojanacare154@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About Us</span>
+                We will be giving regular COVID-19 related INFOrmation to you about your State Country Also about
+                Symptoms Precautions
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
